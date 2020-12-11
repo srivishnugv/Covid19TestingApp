@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19TestingApp.VirtualQueuePage">
+
+    <StackLayout BackgroundColor="LightSeaGreen">
+        <Button Text="COVID-19 Tests Near Me" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center" Margin="75,45"/>
+
+        <Label x:Name="cdLabel" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="White" FontAttributes="Bold" Margin="20"/>
+        <StackLayout BackgroundColor="ForestGreen"  Margin="75,0" HorizontalOptions="Fill" VerticalOptions="Center">
+            <Label  Text=""  FontSize="Subtitle" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="White"/>
+            <Label  Text="IN VIRTUAL QUEUE"  FontSize="Medium" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="White"/>
+        </StackLayout>
+
+        <Button Text="Entered Testing Appointment" BackgroundColor="White" TextColor="Black" BorderColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,40,20,10" Clicked="To_TestingPage"/>
+
+        <Button x:Name="keyInfoBttn" Text="Key Information" BackgroundColor="White" TextColor="Black" BorderColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="50,50,50,10" Clicked="keyInfoBttn_Clicked"/>
+    </StackLayout>
+</ContentPage>

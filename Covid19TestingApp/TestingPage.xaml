@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19TestingApp.TestingPage" BackgroundColor="LightSeaGreen">
+
+    <StackLayout BackgroundColor="LightSeaGreen" VerticalOptions="Center">
+        <Label x:Name="cdLabel" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="White" FontAttributes="Bold" Margin="20"/>
+        <Button Text="You are currently getting tested" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center" Margin="75,45"/>
+        <Button Text="Test Finished" BackgroundColor="White" TextColor="Black" BorderColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Clicked="To_MainPage"/>
+    </StackLayout>
+</ContentPage>

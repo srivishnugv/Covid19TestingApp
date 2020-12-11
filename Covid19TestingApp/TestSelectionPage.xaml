@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19TestingApp.TestSelectionPage">
+
+    <StackLayout BackgroundColor="LightSeaGreen">
+        <Button Text="COVID-19 Tests Near Me" BackgroundColor="Black" TextColor="White" HorizontalOptions="Fill" FontSize="Title" FontAttributes="Bold"  Margin="75,15"/>
+        <StackLayout BackgroundColor="White" Margin="20,5" VerticalOptions="Center">
+            <Label  Text="     Sort by:"  TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+            <Picker x:Name="picker" Title="Select sorting preference" TitleColor="Red" SelectedIndexChanged="picker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Shortest Wait Time</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BackgroundColor="White" Margin="40,20">
+                    <Grid BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="address11" Text="    18 San Fernando Ave,San Jose CA, 95192"  Grid.Row="0" Grid.Column="0" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="distance1" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="Start" BackgroundColor="LightGray" Margin="6,0">
+
+                        <Label Text="People in line" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Pay Option" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Distance" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    </Grid>
+                    <Grid VerticalOptions="Start">
+                        <Label x:Name="people1" Text="12" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="payop1" Text="" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="travel1" TextColor="Black" Text="13 mi" BackgroundColor="White" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Button Text="Join the line"  HorizontalOptions="Fill" VerticalOptions="Center" BorderColor="Black" BorderWidth="1" Clicked="To_VirtualQueuePage" BackgroundColor="Green" FontSize="Small" TextColor="White" Margin="95,0"/>
+                </StackLayout>
+
+                <!---->
+                <StackLayout BackgroundColor="White" Margin="40,20">
+                    <Grid BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="address2" Text="    18 San Fernando Ave,San Jose CA, 95192"  Grid.Row="0" Grid.Column="0" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="distance2" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="Start" BackgroundColor="LightGray" Margin="6,0">
+
+                        <Label Text="People in line" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Pay Option" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Distance" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    </Grid>
+                    <Grid VerticalOptions="Start">
+                        <Label x:Name="people2" Text="28" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="payop2" Text="-- min" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="travel2" TextColor="Black" Text="5 mi" BackgroundColor="White" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Button Text="Join the line"  HorizontalOptions="Fill" VerticalOptions="Center" BorderColor="Black" BorderWidth="1" Clicked="To_VirtualQueuePage" BackgroundColor="Green" FontSize="Small" TextColor="White" Margin="95,0"/>
+
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Margin="40,20">
+                    <Grid BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="address3" Text="    18 San Fernando Ave,San Jose CA, 95192"  Grid.Row="0" Grid.Column="0" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="distance3" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="Start" BackgroundColor="LightGray" Margin="6,0">
+
+                        <Label Text="People in line" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Pay Option" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label Text="Distance" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    </Grid>
+                    <Grid VerticalOptions="Start">
+                        <Label x:Name="people3" Text="7" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="payop3" Text="" TextColor="Black" BackgroundColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Label x:Name="travel3" TextColor="Black" Text="21 mi" BackgroundColor="White" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+                    </Grid>
+                    <Button Text="Join the line"  HorizontalOptions="Fill" VerticalOptions="Center" BorderColor="Black" BorderWidth="1" Clicked="To_VirtualQueuePage" BackgroundColor="Green" FontSize="Small" TextColor="White" Margin="95,0"/>
+                </StackLayout>
+            </StackLayout>
+            <!---->
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

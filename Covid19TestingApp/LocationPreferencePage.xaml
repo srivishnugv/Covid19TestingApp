@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19TestingApp.LocationPreferencePage">
+    
+    <StackLayout BackgroundColor="LightSeaGreen">
+        <Button Text="COVID-19 Tests Near Me" BackgroundColor="Black" TextColor="White" HorizontalOptions="Fill" FontSize="Title" FontAttributes="Bold"  Margin="75,15"/>
+        <StackLayout BackgroundColor="White" Margin="20,150" VerticalOptions="Center">
+            <Label  Text="     Select a testing preference:"  TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+            <Picker x:Name="picker" Title="Testing Preference" TitleColor="Red" SelectedIndexChanged="picker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Free</x:String>
+                        <x:String>Paid</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <StackLayout  HorizontalOptions="CenterAndExpand">
+            <Button Text="Next" BackgroundColor="White" TextColor="Black" BorderColor="Black" Clicked="To_TestSelectionPage" FontAttributes="Bold" HorizontalOptions="Fill"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
